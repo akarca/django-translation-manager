@@ -73,7 +73,7 @@ class ProxyTranslationEntry(TranslationEntry):
 class TranslationBackup(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name=_(u"admin-translation_backup-created-label"))
     changed = models.DateTimeField(auto_now=True, verbose_name=_(u"admin-translation_backup-changed-label"))
-    language = models.CharField(db_index=True, max_length=5, verbose_name=_(u"admin-translation_backup-language-label"))
+    language = models.CharField(db_index=True, max_length=7, verbose_name=_(u"admin-translation_backup-language-label"))
     locale_path = models.CharField(db_index=True, max_length=256, verbose_name=_(u"admin-translation_backup-locale_path-label"))
     locale_parent_dir = models.CharField(db_index=True, max_length=256, verbose_name=_(u"admin-translation_backup-locale_parent_dir-label"))
     domain = models.CharField(db_index=True, max_length=256, verbose_name=_(u"admin-translation_backup-domain-label"))
